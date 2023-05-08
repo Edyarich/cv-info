@@ -1,0 +1,171 @@
+\documentclass[]{resume-openfont}
+% \usepackage[english, russian]{babel}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Eduard Vladimirov}
+% How you want it to show up on the resume
+% \newcommand{\yourWebsite}{website.com}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://website.com}
+\newcommand{\yourEmail}{vladimirov.ea@phystech.edu}
+\newcommand{\yourPhone}{8-917-432-59-16}
+\newcommand{\githubUserName}{Edyarich}
+\newcommand{\linkedInUserName}{edyarich}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+\section{Personal Profile}
+Searching mostly for Data Analyst and Data Science positions.  
+
+Interested in working with data, digging into it (especially with time series).
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{Moscow Institute of Physic and Technology}{Dolgoprudny, Russia}{Sep 2019}{Now}
+
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+
+\educationHeading{Avito Academy of Analysts}{Moscow, Russia}{Sep 2022}{Oct 2023}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+
+% \resumeHeading{JoaTu}{Software Engineer Intern}{Montreal, QC}{Dec 2018 – May 2019}
+% \begin{bullets}
+%     \item Rewrote legacy \textbf{Django code} in \textbf{Ruby in Rails} and refactored it to make the system more extensible.
+%     \item Created \textbf{UML} diagrams and documented where features were implemented, to make the codebase more maintainable.
+% \end{bullets}
+% \sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{The diffusion model in the deep learning library implemented by ourselves}{https://github.com/Edyarich/dlsystems-final-project}{Python, C++, Cuda}
+Ingredients: efficient GPU-based operations, automatic differentiation of all implemented functions, and the necessary modules to support parameterized layers, loss functions, data loaders, and optimizers
+\sectionsep  
+
+\projectHeading{Restoring the trajectory of the hand movement by video}{https://github.com/intsystems/2022-Project-90}{Python, NumPy, Pandas, Matplotlib, PyEDM}
+The paper is devoted to generalization of canonical correlation analysis using the Sugihara method. 
+\sectionsep
+
+\projectHeading{SQL Project}{https://github.com/Edyarich/sql-project}{PostgreSQL}
+The database project "Chess Tournament".
+\sectionsep
+
+\projectHeading{Mathematical Forecasting Methods}{https://github.com/Edyarich/da-materials/tree/main/math-forecast-methods}{Python, \LaTeX}
+Time series analysis in science.
+\sectionsep
+
+\projectHeading{Computer Graphics Project}{https://github.com/Edyarich/comp-graphics-homework}{C++} Simple shooter and visualization of 3D-figures.
+\sectionsep
+
+\projectHeading{Parallel Computation Hometasks}{https://github.com/Edyarich/parallel-computations}{Cuda, HDFS, MapReduce, Hive}
+The repository contains CUDA library for working with vector and matrix operations, hive examples and other hometasks.
+\sectionsep
+
+\projectHeading{Chess club website}{https://github.com/Edyarich/fullstack-project}{HTML/CSS, JavaScript, React, Python, Django}
+\sectionsep
+
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{Python, C, SQL}
+    \\
+    \singleItem{Technology:}{Git, PostgreSQL, Redash, Pytorch, Sklearn, SciPy, \LaTeX}
+    \\
+    \singleItem{Soft Skills:}{Time Management, Teamwork}
+\end{skillList}
+
+\section{Interests}
+\begin{skillList}
+	\singleItem{Cooking:}{Everyone can cook, Ratatouille}
+	\\
+	\singleItem{Swimming:}{It is necessary to maintain the strength of the body in order to preserve the strength of the spirit, Victor Hugo}
+	\\
+	\singleItem{Chess:}{Actually, I rarely play chess, but love watching party analysis and solving puzzles}
+	\\
+	\singleItem{Cinema:}{A.Tarkovsky, David Lynch, Christopher Nolan -- it's not just names for me}
+	\\
+	\singleItem{Neuroscience:}{It's interesting to know how our brain works. Moreover, it brings inspiration to AI researchers, who tries to build an AGI}
+	\\
+	\singleItem{AI:}{Exploit ChatGPT and enjoy playing with text-to-image models}
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
